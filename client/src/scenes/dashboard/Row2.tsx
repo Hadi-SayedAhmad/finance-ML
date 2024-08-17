@@ -137,9 +137,14 @@ const Row2 = () => {
               paddingAngle={2}
               dataKey="value"
             >
-              {pieData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={pieColors[index]} />
-              ))}
+              {pieData.map((p, i) => {
+                {console.log(p);}
+                
+                return (
+                  <Cell key={`cell-${i}`} fill={pieColors[i]} />
+                )
+                
+              })}
             </Pie>
           </PieChart>
           <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
